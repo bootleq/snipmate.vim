@@ -1,3 +1,9 @@
+snippet try
+	try
+		${1}
+	catch /^Vim\%((\a\+)\)\=:${2:E666}/
+		echo "Error detected while processing: " . v:throwpoint . ":\n  " . v:exception .
+	endtry
 snippet header
 	" File: ${1:`expand('%:t')`}
 	" Author: ${2:`g:snips_author`}
